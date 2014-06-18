@@ -793,7 +793,6 @@ func copyFile(orig, targ string) (err error) {
 }
 
 const shRun = `#!/bin/sh
-#!/bin/sh
 appname=` + "`basename $0 | sed s,\\.sh$,,`" + `
 dirname=` + "`dirname $0`" + `
 tmp="${dirname#?}"
