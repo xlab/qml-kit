@@ -48,7 +48,7 @@ using engine.AddImageProvider, but there is a problem with QML files so for now 
 	└── wizard_icon.png
 
 Parts of this template can be used independently, for example you may wish to add a deployment task to your already
-writen project — just copy `deploy_task.go` and `deploy_profile.yaml` files and run `gotask deploy`.
+writen project — just copy deploy_task.go and deploy_profile.yaml files and run `gotask deploy`.
 
 Installation
 
