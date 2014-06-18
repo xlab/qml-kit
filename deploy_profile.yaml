@@ -1,0 +1,63 @@
+# This manifest is a config for deploy task. There is defined what to copy
+# to the resulting package while deploy task is running.
+---
+libs:
+    default:
+        - QtCore
+        - QtGui
+        - QtWidgets
+        - QtQml
+        - QtQuick
+        - QtNetwork
+    darwin:
+        - QtPrintSupport
+    linux:
+        - QtDBus
+
+platforms:
+    darwin:
+        - cocoa
+    linux:
+        - xcb
+    windows:
+        - windows
+
+imageformats:
+    - gif
+    - jpeg
+
+modules:
+    qml:
+        - QtQuick.2
+        # - QtAudioEngine
+        # - QtBluetooth
+        # - QtGraphicalEffects
+        # - QtMultimedia
+        # - QtNfc
+        # - QtPositioning
+        # - QtQml/Models.2
+        # - QtSensors
+        # - QtTest
+        # - QtWebKit
+    qml/QtQuick:
+        - Controls
+        # - Dialogs
+        - Layouts
+        # - LocalStorage
+        # - Particles.2
+        # - PrivateWidgets
+        - Window.2
+        # - XmlListModel
+    qml/Qt:
+        # - WebSockets
+        # - labs/folderlistmodel
+        # - labs/settings
+
+extra:
+    windows:
+        - libgcc_s_dw2-1.dll
+        - libstdc++-6.dll
+        - libwinpthread-1.dll
+        # - icudt52.dll
+        - icuin52.dll
+        - icuuc52.dll

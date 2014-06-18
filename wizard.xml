@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Project wizard for the go-qml applications.
+-->
+<wizard version="1" kind="project"
+        class="qt4project" firstpage="10"
+        id="R.GoQml" category="F.QtApplications">
+    <icon>wizard_icon.png</icon>
+    <description>
+        Creates a go-qml application project that contains both Go source and Qt project to view and edit QML files.
+
+        You can edit and debug QML/QtQuick forms in the QtCreator, and then finish the rest in your favorite editor.
+    </description>
+    <displayname>Go Quick Application</displayname>
+    <files>
+        <file source="project/project.pro" target="project/%ProjectName%.pro" openproject="true"/>
+        <file source="project/main.cpp" openeditor="true"/>
+        <file source="project/qml/main.qml" openeditor="true"/>
+        <file source="project/qtquick2applicationviewer/qtquick2applicationviewer.cpp"/>
+        <file source="project/qtquick2applicationviewer/qtquick2applicationviewer.h"/>
+        <file source="project/qtquick2applicationviewer/qtquick2applicationviewer.pri"/>
+        <file source="project/images/background.png"/>
+        <file source="main.go"/>
+        <file source="deploy_task.go"/>
+        <file source="deploy_profile.yaml"/>
+        <file source="README.md"/>
+    </files>
+</wizard>
