@@ -1,4 +1,4 @@
-**go-qml-kit** is a template for Go/QML projects.
+**qml-kit** is a template for Go/QML projects.
 
 ```
 Features:
