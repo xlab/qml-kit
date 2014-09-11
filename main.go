@@ -29,12 +29,20 @@ func run() error {
 	boxQml = rice.MustFindBox("project/qml")
 
 	engine := qml.NewEngine()
+
 	engine.AddImageProvider("images", unboxImage)
+
+	engine.On("quit", func() {
+		fmt.Println("qml quit")
+		os.Exit(0)
+	})
+
 	component, err := componentFromFile("main.qml", engine)
 	if err != nil {
 		return err
 	}
 	win := component.CreateWindow(nil)
+
 	win.Show()
 	win.Wait()
 

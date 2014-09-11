@@ -5,16 +5,21 @@ import QtQuick.Controls 1.1
 ApplicationWindow {
     minimumWidth: 600; minimumHeight: 400
 
-    Image {
+    MouseArea {
         anchors.fill: parent
-        fillMode: Image.Tile
-        source: "image://images/background.png"
-    }
+        onClicked: Qt.quit()
 
-    Text {
-        text: "Hello, world!"
-        anchors.centerIn: parent
-        font.pointSize: 72
-        color: "#b10000"
+        Image {
+            anchors.fill: parent
+            fillMode: Image.Tile
+            source: "image://images/background.png"
+        }
+
+        Text {
+            text: "Hello, world!"
+            anchors.centerIn: parent
+            font.pointSize: 72
+            color: "#b10000"
+        }
     }
 }
