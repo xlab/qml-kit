@@ -10,7 +10,7 @@ import (
 
 	"bitbucket.org/kardianos/osext"
 	"github.com/GeertJohan/go.rice"
-	"gopkg.in/qml.v0"
+	"gopkg.in/qml.v1"
 )
 
 var imageEmpty = image.NewRGBA(image.Rect(0, 0, 16, 16))
@@ -18,7 +18,7 @@ var boxImages *rice.Box
 var boxQml *rice.Box
 
 func main() {
-	if err := run(); err != nil {
+	if err := qml.Run(run); err != nil {
 		fmt.Fprintf(os.Stderr, "error: %v\n", err)
 		os.Exit(1)
 	}
@@ -27,7 +27,6 @@ func main() {
 func run() error {
 	boxImages = rice.MustFindBox("project/images")
 	boxQml = rice.MustFindBox("project/qml")
-	qml.Init(nil)
 
 	engine := qml.NewEngine()
 	engine.AddImageProvider("images", unboxImage)
